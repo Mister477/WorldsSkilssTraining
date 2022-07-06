@@ -1,0 +1,117 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-size: cover;
+	background-color: #333;
+	background-repeat: no-repeat;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	font-family: fantasy;
+	color: #fff;
+}
+
+h1 {
+	font-family: "Poppins", sans-serif;
+	font-size: 25vmin;
+	line-height: 20vmin;
+}
+
+.gradient-text {
+	color: transparent;
+	background: conic-gradient(
+		#d9d7f1 12%, #baabda 12%,
+		#baabda 33%, #e7fbbe 33%,
+		#e7fbbe 55%, #ffcbcb 55%,
+		#ffcbcb 70%, #b5deff 70%,
+		#b5deff 87%, #f7d1ba 87%
+	);
+	background-size: 50%;
+	background-clip: text;
+	animation:expand-rev 0.5s ease forwards;
+	cursor: pointer;
+}
+
+.gradient-text:hover {
+	animation:expand-rev 0.5s ease forwards;
+}
+
+@keyframes expand {
+	0%{
+		background-size: 50%;
+		background-position: 0 0;
+	}
+	20%{
+		background-size: 55%;
+		background-position: 0 1em;
+	}
+	100%{
+		background-size: 325%;
+		background-position: -10em -4em;
+	}
+}
+
+@keyframes expand-rev {
+	0%{
+		background-size: 325%;
+		background-position: -10em -4em;
+	}
+	20%{
+		background-size: 55%;
+		background-position: 0 1em;
+	}
+	100%{
+		background-size: 50%;
+		background-position: 0 0;
+	}
+}
+
+h4 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #77608d;
+}
+
+.blocks{
+	align-items: center;
+	justify-content: center;
+	border: 2px solid #000;
+	width: 300px;
+	overflow: hidden;
+	background-color: rgba(0,0,0, 0.3);
+	list-style-type: none;
+}
+[id^='block']{
+	display: grid;
+}
+
+#blcok0{
+	margin: 5px;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+
+
+
+@media(max-width: 1200px){
+	#blcok0{
+		grid-template-columns: 1fr 1fr 1fr; 
+	}
+}
+
+@media(max-width: 800px){
+	#blcok0{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media(max-width: 570px){
+	#blcok0{
+		grid-template-columns: 1fr; 
+	}
+}
