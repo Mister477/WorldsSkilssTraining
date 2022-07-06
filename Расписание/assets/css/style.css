@@ -1,0 +1,103 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background-size: cover;
+	background-color: #333;
+	background-repeat: no-repeat;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	font-family: fantasy;
+}
+h1 {
+	font-family: "Poppins", sans-serif;
+	font-size: 25vmin;
+	line-height: 20vmin;
+}
+
+.gradient-text {
+	color: transparent;
+	background: conic-gradient(
+		#d9d7f1 12%, #baabda 12%,
+		#baabda 33%, #e7fbbe 33%,
+		#e7fbbe 55%, #ffcbcb 55%,
+		#ffcbcb 70%, #b5deff 70%,
+		#b5deff 87%, #f7d1ba 87%
+	);
+	background-size: 50%;
+	background-clip: text;
+	animation:expand-rev 0.5s ease forwards;
+	cursor: pointer;
+}
+
+.gradient-text:hover {
+	animation:expand-rev 0.5s ease forwards;
+}
+
+@keyframes expand {
+	0%{
+		background-size: 50%;
+		background-position: 0 0;
+	}
+	20%{
+		background-size: 55%;
+		background-position: 0 1em;
+	}
+	100%{
+		background-size: 325%;
+		background-position: -10em -4em;
+	}
+}
+
+@keyframes expand-rev {
+	0%{
+		background-size: 325%;
+		background-position: -10em -4em;
+	}
+	20%{
+		background-size: 55%;
+		background-position: 0 1em;
+	}
+	100%{
+		background-size: 50%;
+		background-position: 0 0;
+	}
+}
+
+table{
+	padding: 20px;
+	display: grid;
+}
+
+td{
+	border: 2px solid black;
+	padding: 10px;
+	color: #fff;
+	background-color: rgba(0,0,0, 0.3);
+	width: 90px;
+	height: 15px;
+	margin-bottom: 10px;
+	transition: .5s;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+tr{
+	display: grid;
+	grid-gap: 2px;
+	grid-template-columns: repeat(8, 1fr);
+}
+
+td.num{
+	border: unset;
+	background-color: unset;
+	width: 	10px !important;
+	height: 10px;
+	margin: 10px;
+	padding: 10px;
+	color: #77608d;
+}
